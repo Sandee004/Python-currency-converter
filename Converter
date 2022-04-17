@@ -1,0 +1,52 @@
+print('Welcome, I am Errz. Your personal currency converter')
+print('Convert between naira, dollars and pounds')
+
+print('Input number')
+number=int(input())
+#number is the number to be converted
+
+print('What currency is the value?(pounds, dollar or naira)')
+currency=input()
+#currency is what denomination we are converting from
+print('Ok')
+
+print('Convert '+str(number) +' to?(pounds, dollars or naira)')
+convertto=input()
+#convertto is convert to pounds,dollars or naira
+
+nairap=number*0.0018
+#naira to pounds
+nairad=number*0.0024
+#naira to dollar
+
+dollarn=number*410
+#dollars to naira
+dollarp=number*0.72
+#dollars to pounds
+
+poundn=number*570
+#pounds to naira
+poundd=number*1.39
+#pounds to dollars
+
+
+if currency=='naira' and convertto=='pounds':
+    print('Equivalent to £'+str(nairap))
+if currency=='naira' and convertto=='dollars':
+    print('Equivalent to $'+str(nairad))
+if currency=='naira' and convertto=='naira':
+    print('Error!! I am programmed to convert from one currency to another')
+    
+if currency=='dollars' and convertto=='naira':
+    print('Equivalent to #'+str(dollarn))
+if currency=='dollars' and convertto=='pounds':
+    print('Equivalent to £'+str(dollarp))
+if currency=='dollars' and convertto=='dollars':
+    print('Error!! I am programmed to convert from one currency to another')
+
+if currency=='pounds' and convertto=='naira':
+    print('Equivalent to #'+str(poundn))
+if currency=='pounds' and convertto=='dollars':
+    print('Equivalent to $'+str(poundd))
+if currency=='pounds' and convertto=='pounds':
+    print('Error!! I am programmed to convert from one currency to another')
